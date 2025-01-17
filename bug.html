@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to append to an element that might not exist yet
+    document.getElementById('myDiv').innerHTML += "<p>This text might not show!</p>";
+  </script>
+</body>
+</html>
